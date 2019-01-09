@@ -1,0 +1,110 @@
+{
+    "version": 8,
+    "name": "MRN - Áreas para mineração",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "default",
+        "mapbox:sdk-support": {
+            "js": "0.49.0",
+            "android": "6.5.0",
+            "ios": "4.4.0"
+        }
+    },
+    "center": [-56.34275441701783, -1.4760126319461762],
+    "zoom": 11.799909009382535,
+    "bearing": -0.000039257441017070967,
+    "pitch": 2,
+    "sources": {
+        "mapbox://mapbox.satellite": {
+            "url": "mapbox://mapbox.satellite",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "composite": {
+            "url": "mapbox://infoamazonia.5jr1v3jt,infoamazonia.b8twiztn,infoamazonia.b359wckh",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/infoamazonia/cjppwu3qy0q3y2rml3o6lumr3",
+    "glyphs": "mapbox://fonts/infoamazonia/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {"background-color": "rgb(4,7,14)"}
+        },
+        {
+            "id": "satellite",
+            "type": "raster",
+            "source": "mapbox://mapbox.satellite",
+            "source-layer": "mapbox_satellite_full"
+        },
+        {
+            "id": "mrn-reas-para-minerao-8xm105",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "MRN_-_reas_para_minerao-8xm105",
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "match",
+                    ["get", "ESTADO"],
+                    ["Futura"],
+                    "hsla(82, 93%, 57%, 0.5)",
+                    ["Em operação"],
+                    "hsla(51, 100%, 61%, 0.5)",
+                    ["Exaurida"],
+                    "hsla(0, 100%, 45%, 0.3)",
+                    "hsl(0, 0%, 0%)"
+                ],
+                "fill-outline-color": [
+                    "case",
+                    ["match", ["get", "ESTADO"], ["", "Futura"], true, false],
+                    "hsla(82, 93%, 57%, 0.8)",
+                    [
+                        "match",
+                        ["get", "ESTADO"],
+                        ["", "Em operação"],
+                        true,
+                        false
+                    ],
+                    "hsla(51, 100%, 61%, 0.8)",
+                    ["match", ["get", "ESTADO"], ["Exaurida"], true, false],
+                    "hsla(0, 100%, 45%, 0.5)",
+                    "#000000"
+                ]
+            }
+        },
+        {
+            "id": "comunidadesquilombolasemoriximina",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "ComunidadesQuilombolasEmOriximina",
+            "layout": {},
+            "paint": {
+                "circle-color": "hsl(15, 98%, 49%)",
+                "circle-stroke-color": "#d9b202",
+                "circle-opacity": 0.86,
+                "circle-radius": 7
+            }
+        },
+        {
+            "id": "portotrombetas",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "PortoTrombetas",
+            "layout": {},
+            "paint": {
+                "circle-color": "#f48900",
+                "circle-radius": 15,
+                "circle-opacity": 0.8
+            }
+        }
+    ],
+    "created": "2018-12-15T20:24:42.959Z",
+    "id": "cjppwu3qy0q3y2rml3o6lumr3",
+    "modified": "2018-12-17T16:14:58.808Z",
+    "owner": "infoamazonia",
+    "visibility": "private",
+    "draft": false
+}
