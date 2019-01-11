@@ -1,6 +1,6 @@
 /* global window */
 import React, {Component} from 'react';
-import ReactMapGL from 'react-map-gl';
+import ReactMapGL, {Popup} from 'react-map-gl';
 //import MAP_STYLE from './style.json';
 // import MAP_STYLE from './mapbox/styles/map1.json';
 import {fromJS} from 'immutable';
@@ -10,6 +10,9 @@ import LegendMap from './mapbox/LegendMap';
 import Fullscreenable from 'react-fullscreenable';
 import TooltipsMap1 from './mapbox/tooltips/TooltipsMap1.js';
 import TooltipsMap1_2 from './mapbox/tooltips/TooltipsMap1_2.js';
+import TooltipsMap2 from './mapbox/tooltips/TooltipsMap2.js';
+import TooltipsMap2_2 from './mapbox/tooltips/TooltipsMap2_2.js';
+import TooltipsMap2_3 from './mapbox/tooltips/TooltipsMap2_3.js';
 import 'mapbox-gl/src/css/mapbox-gl.css'
 
 // import Map1_2 from './mapbox/LegendMap2';
@@ -19,7 +22,9 @@ const MAPBOX_TOKEN = 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiU
 const tooltips = {
   'quilombolasdesmatamentominera-bl6vgg':TooltipsMap1,
   'mineracaobrasil-9cc2wi':TooltipsMap1_2,
-  //map2:[TooltipsMap2,'quilombolasdesmatamentominera-bl6vgg']
+  'mrn-reas-para-minerao-8xm105':TooltipsMap2,
+  'comunidadesquilombolasemoriximina':TooltipsMap2_2,
+  'portotrombetas':TooltipsMap2_3
 }
 
 class MapBox extends Component {
@@ -141,9 +146,12 @@ class MapBox extends Component {
             mapboxApiAccessToken={MAPBOX_TOKEN} 
             onHover={this._showTooltip} 
             >
-            <LegendMap mapStyle='' map={this.props.map} showExtraLayers={this.props.showExtraLayers} containerComponent={this.props.containerComponent} 
-            legend={this.props.legend} key={this.props.update} onChange={this._onStyleChange} />
+              <LegendMap mapStyle='' map={this.props.map} showExtraLayers={this.props.showExtraLayers} containerComponent={this.props.containerComponent} 
+              legend={this.props.legend} key={this.props.update} onChange={this._onStyleChange} />
             {this._renderTooltip()}
+            <Popup latitude={-1.469} longitude={-56.375} closeButton={true} closeOnClick={false} anchor="bottom">
+              <h2>Porto Trombetas</h2>
+            </Popup>
           </ReactMapGL>
       }
       </div>

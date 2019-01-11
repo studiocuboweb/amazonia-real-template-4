@@ -33,17 +33,17 @@ export default () => (
         A survey conducted by organizations in Bolivia, Brazil, Colombia, Ecuador, Peru and Venezuela confirms the existence of at least <StoryMedia
         icon="map"
         media={{
-        id: "map_01",
+        id: "map_03",
         type: "mapbox",
           data: {
-            map: "map1",
-            legend:"legend1",
-            update: "map1_1",
+            map: "map3",
+            legend:null,
+            update: "map3",
             showExtraLayers: [],
-            coordinates: [-56.607,-1.279],
-            zoomNumber: 7.5,
-            zoomMin: 3.5,
-            zoomMax: 16.0
+            coordinates: [-25.687,18.460],
+            zoomNumber: 3.0,
+            zoomMin: 1.0,
+            zoomMax: 4.0,
           }
         }}> 2312 sites and 245 areas of prospecting or extraction of minerals such as gold, diamonds and coltan. In addition, 30 rivers</StoryMedia>
         affected by mining or acting as routes for the entry of machinery and inputs and the outlet of the minerals were mapped.
@@ -69,17 +69,17 @@ export default () => (
         Of all the sites mapped, the majority are in Venezuela, followed by Brazil, Ecuador and Peru. In Colombia and Bolivia, analysis was done by rivers, which is why it is not quantified by specific sites. Out of the 245 extraction areas, three are in Bolivia, <StoryMedia
         icon="map"
         media={{
-        id: "map_02a",
+        id: "map_2",
         type: "mapbox",
         data: {
-          map: "map1",
-          legend:"legend1",
-          update:"map1_2",
-          showExtraLayers: ['Para-MASCARA_div-politica-departamental'],
-          coordinates: [-56.604340,-6.120435],
-          zoomNumber: 6.29,
-          zoomMin: 5,
-          zoomMax: 22
+          map: "map2",
+          legend:null,
+          update:"map2",
+          showExtraLayers: [],
+          coordinates: [-56.623,-1.686],
+          zoomNumber: 10.0,
+          zoomMin: 7.0,
+          zoomMax: 11.4
         }
         }}>132 in Brazil, mainly in the Tapajós River region</StoryMedia>, and 110 in Peru, in Madre de Dios. This Peruvian department is considered the area of the Amazon with the most pronounced degradation caused by gold prospecting.
       </Paragraph>
@@ -92,17 +92,17 @@ export default () => (
         The deputy director of Gaia Amazonas, Camilo Guio, warns that "these illegal extractive activities are characterized by their rudimentary and unsustainable nature. They are <StoryMedia
         icon="map"
         media={{
-        id: "map_02b",
+        id: "map_1",
         type: "mapbox",
         data: {
           map: "map1",
-          legend:"legend1",
-          update:"map1_3",
-          showExtraLayers: ['COLOMBIA-MASCARA_div-politica-pais'],
-          coordinates: [-72.254582,0.547990],
-          zoomNumber: 5.50,
-          zoomMin: 3,
-          zoomMax: 22
+          legend:'legend1',
+          update:"map1",
+          showExtraLayers: [],
+          coordinates: [-56.607,-1.279],
+          zoomNumber: 7.5,
+          zoomMin: 3.5,
+          zoomMax: 16.0
         }
         }}> carried out mainly with barges and dredgers, which not only have environmental impacts on the river bed</StoryMedia>, but also involve the misuse of mercury. This is causing damage to the health of local populations, especially indigenous peoples".
       </Paragraph>
@@ -154,22 +154,7 @@ export default () => (
       </Table>
 
       <Paragraph>
-        These <StoryMedia
-        icon="map"
-        media={{
-        id: "map_02c",
-        type: "mapbox",
-        data: {
-          map: "map1",
-          legend:"legend1",
-          update:"map1_4",
-          showExtraLayers: ['BOLIVIA-MASCARA_div-politica-pais'],
-          coordinates: [-65.224,-15.384330],
-          zoomNumber: 5.40,
-          zoomMin: 5,
-          zoomMax: 22
-        },
-        }}>sources of information were treated at differing levels of depth</StoryMedia> and, on the other hand, the rate of expansion of mining varies across the region, such that the places currently considered as single sites may very soon become areas of exploitation. In this way, the numbers may change, but it is clear that the total area is increasing. In Venezuela, this seems to be the situation, as reports change drastically every year.
+        These sources of information were treated at differing levels of depth and, on the other hand, the rate of expansion of mining varies across the region, such that the places currently considered as single sites may very soon become areas of exploitation. In this way, the numbers may change, but it is clear that the total area is increasing. In Venezuela, this seems to be the situation, as reports change drastically every year.
       </Paragraph>
 
       <Paragraph>
@@ -221,22 +206,7 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Likewise, it is probably not possible to identify all watercourses where barges are currently in use, especially when there are no indigenous communities that can provide this information. In addition to activity in remote areas, there is an <StoryMedia
-        icon="map"
-        media={{
-        id: "map_01b",
-        type: "mapbox",
-        data: {
-          map: "map1",
-          legend:"legend2",
-          update:"map1_5",
-          showExtraLayers: ['LEGENDA4_MineracaoLegalZ4'],
-          coordinates: [-62.798552,-7.736987],
-          zoomNumber: 4.00,
-          zoomMin: 4,
-          zoomMax: 10
-        },
-        }}>overlap between legal and illegal mining that contributes to making the situation even more confusing</StoryMedia> and thereby making it impossible to determine the overall scale of the problem.
+        Likewise, it is probably not possible to identify all watercourses where barges are currently in use, especially when there are no indigenous communities that can provide this information. In addition to activity in remote areas, there is an overlap between legal and illegal mining that contributes to making the situation even more confusing and thereby making it impossible to determine the overall scale of the problem.
       </Paragraph>
       
       <Paragraph>

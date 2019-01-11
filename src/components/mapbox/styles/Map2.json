@@ -45,6 +45,7 @@
             "source": "composite",
             "source-layer": "MRN_-_reas_para_minerao-8xm105",
             "layout": {},
+            "interactive": "true",
             "paint": {
                 "fill-color": [
                     "match",
@@ -81,6 +82,7 @@
             "source": "composite",
             "source-layer": "ComunidadesQuilombolasEmOriximina",
             "layout": {},
+            "interactive": "true",
             "paint": {
                 "circle-color": "hsl(15, 98%, 49%)",
                 "circle-stroke-color": "#d9b202",
@@ -93,6 +95,7 @@
             "type": "circle",
             "source": "composite",
             "source-layer": "PortoTrombetas",
+            "interactive": "true",
             "layout": {},
             "paint": {
                 "circle-color": "#f48900",

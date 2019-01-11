@@ -60,6 +60,11 @@
         "composite": {
             "url": "mapbox://mapbox.cc9j0p61,mapbox.mapbox-streets-v7,mapbox.92olaqdt,mapbox.9tm8dx88,mapbox.4suez6c9,mapbox.b1l3wqbs,mapbox.akwnx50w,mapbox.8x70v9py,mapbox.d4advw8k,mapbox.mapbox-terrain-v2",
             "type": "vector"
+        },
+        "mapbox://infoamazonia.9rpo7asp": {
+            "type": "raster",
+            "tiles": ["https://api.mapbox.com/v4/infoamazonia.9rpo7asp/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g"],
+            "tileSize": 256
         }
     },
     "sprite": "mapbox://sprites/infoamazonia/cjpqbunw65f6y2rqoexk0c08j",
@@ -1097,6 +1102,14 @@
                 },
                 "fill-antialias": false
             }
+        },
+        {
+            "id": "infoamazonia-9rpo7asp",
+            "type": "raster",
+            "metadata": {},
+            "source": "mapbox://infoamazonia.9rpo7asp",
+            "layout": {},
+            "paint": {}
         },
         {
             "id": "ferry",
@@ -4138,7 +4151,7 @@
     ],
     "created": "2018-12-16T03:25:03.665Z",
     "id": "cjpqbunw65f6y2rqoexk0c08j",
-    "modified": "2018-12-17T16:10:46.467Z",
+    "modified": "2019-01-11T13:19:23.946Z",
     "owner": "infoamazonia",
     "visibility": "private",
     "draft": false
