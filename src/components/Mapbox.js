@@ -149,9 +149,12 @@ class MapBox extends Component {
               <LegendMap mapStyle='' map={this.props.map} showExtraLayers={this.props.showExtraLayers} containerComponent={this.props.containerComponent} 
               legend={this.props.legend} key={this.props.update} onChange={this._onStyleChange} />
             {this._renderTooltip()}
-            <Popup latitude={-1.469} longitude={-56.375} closeButton={true} closeOnClick={false} anchor="bottom">
-              <h2>Porto Trombetas</h2>
-            </Popup>
+            { this.props.map == "map3" && (
+              <Popup latitude={-1.469} longitude={-56.375} closeButton={true} closeOnClick={false} anchor="bottom">
+                <h2>Porto Trombetas</h2>
+              </Popup>
+            )};
+            }
           </ReactMapGL>
       }
       </div>

@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 export default ({ children }) => (
   <Wrapper>
     <Header />
-    <ArticleNav />
+    {/* <ArticleNav /> */}
     <Content>
       {children}
     </Content>
