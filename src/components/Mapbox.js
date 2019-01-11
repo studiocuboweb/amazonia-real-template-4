@@ -8,9 +8,19 @@ import PropTypes from 'prop-types';
 import Dimensions from 'react-dimensions';
 import LegendMap from './mapbox/LegendMap';
 import Fullscreenable from 'react-fullscreenable';
+import TooltipsMap1 from './mapbox/tooltips/TooltipsMap1.js';
+import TooltipsMap1_2 from './mapbox/tooltips/TooltipsMap1_2.js';
+import 'mapbox-gl/src/css/mapbox-gl.css'
+
 // import Map1_2 from './mapbox/LegendMap2';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g'; // Set your mapbox token here
+
+const tooltips = {
+  'quilombolasdesmatamentominera-bl6vgg':TooltipsMap1,
+  'mineracaobrasil-9cc2wi':TooltipsMap1_2,
+  //map2:[TooltipsMap2,'quilombolasdesmatamentominera-bl6vgg']
+}
 
 class MapBox extends Component {
 
@@ -19,6 +29,7 @@ class MapBox extends Component {
     this.state = {
       mapStyle: '',
       updated: true,
+      hoveredFeature: null,
       viewport: {
         width: this.props.containerWidth,
         height: this.props.containerHeight,
@@ -27,7 +38,8 @@ class MapBox extends Component {
         minZoom: this.props.zoomMin,
         maxZoom: this.props.zoomMax,   
         zoom: this.props.zoomNumber
-      }
+      },
+      popupInfo: null
     }
   }
 
@@ -93,6 +105,28 @@ class MapBox extends Component {
       )
     }
   }
+  _showTooltip = event => {
+    const {features, srcEvent: {offsetX, offsetY}} = event;
+    const hoveredFeature = features && features.find(f => f.layer.id ===  event.features[0]['layer']['id']);
+    this.setState({hoveredFeature, x: offsetX, y: offsetY});
+  };
+
+  _renderTooltip() {
+    const {hoveredFeature, x, y} = this.state;
+    let TooltipComponent = '';
+    if (hoveredFeature) {
+      TooltipComponent = tooltips[hoveredFeature['layer']['id']]
+    }
+    return hoveredFeature && (
+      <div>
+        <TooltipComponent 
+          hoveredFeature={hoveredFeature}
+          x={x}
+          y={y}>
+        </TooltipComponent>
+      </div>
+    );
+  }
   render() {
     const {viewport, mapStyle, updated} = this.state;
     return (
@@ -104,22 +138,18 @@ class MapBox extends Component {
             {...viewport}
             mapStyle={mapStyle}
             onViewportChange={this._onViewportChange}
-            //mapStyle={defaultMapStyle}
-            mapboxApiAccessToken={MAPBOX_TOKEN} >
+            mapboxApiAccessToken={MAPBOX_TOKEN} 
+            onHover={this._showTooltip} 
+            >
             <LegendMap mapStyle='' map={this.props.map} showExtraLayers={this.props.showExtraLayers} containerComponent={this.props.containerComponent} 
             legend={this.props.legend} key={this.props.update} onChange={this._onStyleChange} />
+            {this._renderTooltip()}
           </ReactMapGL>
       }
       </div>
     );
   }
 }
-
-
-// MapBox.defaultProps = {
-//   width: 400,
-//   height: 400
-// }
 
 MapBox.propTypes = {
     isFullscreen: PropTypes.bool,

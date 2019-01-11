@@ -41,14 +41,24 @@
             "ios": "4.4.0"
         }
     },
-    "center": [-50.50767974961383, -10.999945176244182],
-    "zoom": 4.483853981668674,
+    "center": [-46.314595304874274, -14.703953685696234],
+    "zoom": 5.722435786771996,
     "bearing": -0.000039257441017070967,
     "pitch": 2,
     "sources": {
         "composite": {
-            "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v7,infoamazonia.41qjpyzj,infoamazonia.52el8pcn",
+            "url": "mapbox://infoamazonia.52el8pcn,infoamazonia.41qjpyzj,mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2",
             "type": "vector"
+        },
+        "mapbox://infoamazonia.5ascfk0h": {
+            "url": "mapbox://infoamazonia.5ascfk0h",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://infoamazonia.6pa1ilyc": {
+            "url": "mapbox://infoamazonia.6pa1ilyc",
+            "type": "raster",
+            "tileSize": 256
         }
     },
     "sprite": "mapbox://sprites/infoamazonia/cjpqcziyg1rd62rpirmqng84r",
@@ -2628,8 +2638,8 @@
         {
             "id": "quilombolasdesmatamentominera-bl6vgg",
             "type": "fill",
-            "metadata": {},
             "source": "composite",
+            "interactive": "true",
             "source-layer": "QuilombolasDesmatamentoMinera-bl6vgg",
             "layout": {},
             "paint": {
@@ -2638,10 +2648,29 @@
             }
         },
         {
+            "id": "infoamazonia-6pa1ilyc",
+            "type": "raster",
+            "metadata": {},
+            "source": "mapbox://infoamazonia.6pa1ilyc",
+            "layout": {},
+            "paint": {}
+        },
+        {
+            "id": "infoamazonia-5ascfk0h",
+            "type": "raster",
+            "metadata": {},
+            "source": "mapbox://infoamazonia.5ascfk0h",
+            "layout": {},
+            "paint": {}
+        },
+        {
             "id": "mineracaobrasil-9cc2wi",
             "type": "fill",
+            "metadata": {},
             "source": "composite",
             "source-layer": "MineracaoBrasil-9cc2wi",
+            "interactive": "true",
+            "minzoom": 6,
             "layout": {},
             "paint": {
                 "fill-outline-color": "hsl(185, 40%, 34%)",
@@ -4015,7 +4044,7 @@
     ],
     "created": "2018-12-16T03:56:50.046Z",
     "id": "cjpqcziyg1rd62rpirmqng84r",
-    "modified": "2018-12-17T00:33:05.360Z",
+    "modified": "2019-01-09T13:00:30.453Z",
     "owner": "infoamazonia",
     "visibility": "private",
     "draft": false

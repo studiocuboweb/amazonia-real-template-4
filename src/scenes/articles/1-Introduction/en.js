@@ -40,10 +40,10 @@ export default () => (
             legend:"legend1",
             update: "map1_1",
             showExtraLayers: [],
-            coordinates: [-62.798552,-7.736987],
-            zoomNumber: 4,
-            zoomMin: 3,
-            zoomMax: 10
+            coordinates: [-56.607,-1.279],
+            zoomNumber: 7.5,
+            zoomMin: 3.5,
+            zoomMax: 16.0
           }
         }}> 2312 sites and 245 areas of prospecting or extraction of minerals such as gold, diamonds and coltan. In addition, 30 rivers</StoryMedia>
         affected by mining or acting as routes for the entry of machinery and inputs and the outlet of the minerals were mapped.
