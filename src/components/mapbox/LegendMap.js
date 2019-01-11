@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {fromJS} from 'immutable';
-import MAP_STYLE1 from './styles/map1.json';
+import MAP_STYLE1 from './styles/Map1.json';
 import MAP_STYLE2 from './styles/Map2.json';
 import MAP_STYLE3 from './styles/Map3.json';
 import "styles/mapbox.css";
