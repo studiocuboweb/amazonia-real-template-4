@@ -51,8 +51,8 @@
             "type": "vector"
         },
         "mapbox://infoamazonia.5ascfk0h": {
-            "url": "mapbox://infoamazonia.5ascfk0h",
             "type": "raster",
+            "tiles": ["https://api.mapbox.com/v4/infoamazonia.5ascfk0h/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g"],
             "tileSize": 256
         },
         "mapbox://infoamazonia.6pa1ilyc": {
