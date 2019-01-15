@@ -47,7 +47,7 @@
     "pitch": 2,
     "sources": {
         "mapbox://infoamazonia.5ascfk0h": {
-            "url": "mapbox://infoamazonia.5ascfk0h",
+            "tiles": ["https://api.mapbox.com/v4/infoamazonia.5ascfk0h/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g"],
             "type": "raster",
             "tileSize": 256
         },
