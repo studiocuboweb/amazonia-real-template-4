@@ -36,12 +36,8 @@ class MapBox extends Component {
       updated: true,
       hoveredFeature: null,
       viewport: {
-        width: this.props.containerWidth,
-        height: this.props.containerHeight,
         latitude: this.props.coordinates[1],
         longitude: this.props.coordinates[0],   
-        minZoom: this.props.zoomMin,
-        maxZoom: this.props.zoomMax,   
         zoom: this.props.zoomNumber
       },
       popupInfo: null
@@ -49,6 +45,24 @@ class MapBox extends Component {
   }
 
   _onViewportChange = viewport => {
+    console.log(this.props.maxBound);
+    if (this.props.maxBounds !== undefined)
+      if ( viewport.longitude < this.props.maxBounds.minLongitude ) {
+        viewport.longitude = MyOverlay.maxBounds.minLongitude;
+      }
+      else if ( viewport.longitude > this.props.maxBounds.maxLongitude ) {
+        viewport.longitude = MyOverlay.maxBounds.maxLongitude;
+      }
+      else if ( viewport.latitude < this.props.maxBounds.minLatitude ) {
+        viewport.latitude = MyOverlay.maxBounds.minLatitude;
+      }
+      else if ( viewport.latitude > this.props.maxBounds.maxLatitude ) {
+        viewport.latitude = this.props.maxBounds.maxLatitude;
+      }
+    this.setState( {
+      viewport: { ...this.state.viewport, ...viewport }
+    } );
+    
     this.setState({viewport});
   }
 
@@ -62,12 +76,8 @@ class MapBox extends Component {
         this.setState(
           {
             viewport: {
-              width: window.innerWidth,
-              height: window.innerHeight,
               latitude: this.props.coordinates[1],
-              longitude: this.props.coordinates[0],   
-              minZoom: this.props.zoomMin,
-              maxZoom: this.props.zoomMax,   
+              longitude: this.props.coordinates[0],    
               zoom: this.props.zoomNumber
             }
         })
@@ -75,12 +85,8 @@ class MapBox extends Component {
         this.setState(
           {
             viewport: {
-              width: this.props.containerWidth,
-              height: this.props.containerHeight,
               latitude: this.props.coordinates[1],
-              longitude: this.props.coordinates[0],   
-              minZoom: this.props.zoomMin,
-              maxZoom: this.props.zoomMax,   
+              longitude: this.props.coordinates[0],     
               zoom: this.props.zoomNumber
             }
         })        
@@ -95,13 +101,9 @@ class MapBox extends Component {
               mapStyle: '',
               updated:true,
               viewport: {
-                width: this.props.containerWidth,
-                height: this.props.containerHeight,
                 latitude: this.props.coordinates[1],
-                longitude: this.props.coordinates[0],   
-                minZoom: this.props.zoomMin,
-                maxZoom: this.props.zoomMax,   
-                zoom: this.props.zoomNumber
+                longitude: this.props.coordinates[0],    
+                zoom: this.props.zoomNumber,
               }
             })
         }
@@ -142,8 +144,13 @@ class MapBox extends Component {
           <ReactMapGL
             {...viewport}
             mapStyle={mapStyle}
+            width={this.props.containerWidth}
+            height={this.props.containerHeight}
             onViewportChange={this._onViewportChange}
-            mapboxApiAccessToken={MAPBOX_TOKEN} 
+            mapboxApiAccessToken={MAPBOX_TOKEN}
+            minZoom={this.props.zoomMin}
+            maxZoom={this.props.zoomMax}
+            attributionControl={false}
             onHover={this._showTooltip} 
             >
               <LegendMap mapStyle='' map={this.props.map} showExtraLayers={this.props.showExtraLayers} containerComponent={this.props.containerComponent} 

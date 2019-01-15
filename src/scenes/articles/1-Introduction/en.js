@@ -66,6 +66,11 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
+
+      var bounds = [
+		[-59.704,], // Southwest coordinates
+		[-51.677,]  // Northeast coordinates
+	];
         Of all the sites mapped, the majority are in Venezuela, followed by Brazil, Ecuador and Peru. In Colombia and Bolivia, analysis was done by rivers, which is why it is not quantified by specific sites. Out of the 245 extraction areas, three are in Bolivia, <StoryMedia
         icon="map"
         media={{
@@ -77,6 +82,7 @@ export default () => (
           update:"map2",
           showExtraLayers: [],
           coordinates: [-56.623,-1.686],
+          maxBounds: {"minLongitude":-59.704,"maxLongitude":-51.677,"minLatitude":-3.040,"maxLatitude":1.773},
           zoomNumber: 10.0,
           zoomMin: 7.0,
           zoomMax: 11.4
@@ -87,7 +93,6 @@ export default () => (
       <Quote author="Camilo Guio, deputy director of Gaia Amazonas">
         These activities are carried out mainly with barges and dredgers, which not only have environmental impacts on the river bed, but also involve the misuse of mercury
       </Quote>
-
       <Paragraph>
         The deputy director of Gaia Amazonas, Camilo Guio, warns that "these illegal extractive activities are characterized by their rudimentary and unsustainable nature. They are <StoryMedia
         icon="map"
@@ -100,6 +105,7 @@ export default () => (
           update:"map1",
           showExtraLayers: [],
           coordinates: [-56.607,-1.279],
+          maxBounds: {"minLongitude":-76.049,"maxLongitude":-33.900,"minLatitude":-35.238,"maxLatitude":8.004},
           zoomNumber: 7.5,
           zoomMin: 3.5,
           zoomMax: 16.0
