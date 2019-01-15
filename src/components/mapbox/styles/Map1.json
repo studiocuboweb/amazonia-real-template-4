@@ -52,7 +52,7 @@
             "tileSize": 256
         },
         "mapbox://infoamazonia.6pa1ilyc": {
-            "url": "mapbox://infoamazonia.6pa1ilyc",
+            "tiles": ["https://api.mapbox.com/v4/infoamazonia.6pa1ilyc/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g"],
             "type": "raster",
             "tileSize": 256
         },
