@@ -39,7 +39,9 @@ class MapBox extends Component {
       hoveredFeature: null,
       viewport: {
         latitude: this.props.coordinates[1],
-        longitude: this.props.coordinates[0],   
+        longitude: this.props.coordinates[0], 
+        width: this.props.containerWidth,
+        height: this.props.containerHeight,
         zoom: this.props.zoomNumber
       },
       popupInfo: null
@@ -78,7 +80,9 @@ class MapBox extends Component {
           {
             viewport: {
               latitude: this.props.coordinates[1],
-              longitude: this.props.coordinates[0],    
+              longitude: this.props.coordinates[0],   
+              width: window.innerWidth,
+              height: window.innerHeight,
               zoom: this.props.zoomNumber
             }
         })
@@ -87,7 +91,9 @@ class MapBox extends Component {
           {
             viewport: {
               latitude: this.props.coordinates[1],
-              longitude: this.props.coordinates[0],     
+              longitude: this.props.coordinates[0],
+              width: this.props.containerWidth,
+              height: this.props.containerHeight, 
               zoom: this.props.zoomNumber
             }
         })        
@@ -104,6 +110,8 @@ class MapBox extends Component {
               viewport: {
                 latitude: this.props.coordinates[1],
                 longitude: this.props.coordinates[0],    
+                width: this.props.containerWidth,
+                height: this.props.containerHeight,
                 zoom: this.props.zoomNumber,
               }
             })
@@ -145,8 +153,6 @@ class MapBox extends Component {
           <ReactMapGL
             {...viewport}
             mapStyle={mapStyle}
-            width={this.props.containerWidth}
-            height={this.props.containerHeight}
             onViewportChange={this._onViewportChange}
             mapboxApiAccessToken={MAPBOX_TOKEN}
             minZoom={this.props.zoomMin}
