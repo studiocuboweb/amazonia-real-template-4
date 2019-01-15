@@ -13,19 +13,14 @@ const styles = {
   map3: MAP_STYLE3,
 };
 
-const categories = ['infoamazonia-6pa1ilyc','infoamazonia-5ascfk0h','mineracaobrasil-9cc2wi'];
+const categories = ['infoamazonia-6pa1ilyc','infoamazonia-5ascfk0h','mineracaobrasil-9cc2wi','ucsbrasil-6b9256'];
 
 // Layer id patterns by category
 const layerSelector = {
   'infoamazonia-6pa1ilyc': /infoamazonia-6pa1ilyc/,
   'infoamazonia-5ascfk0h': /infoamazonia-5ascfk0h/,
   'mineracaobrasil-9cc2wi': /mineracaobrasil-9cc2wi/,
-};
-
-const layerLabels = {
-  'infoamazonia-6pa1ilyc': 'Desmatamento',
-  'infoamazonia-5ascfk0h': 'Desmatamento 2',
-  'mineracaobrasil-9cc2wi': 'Mineração',
+  'ucsbrasil-6b9256': /ucsbrasil-6b9256/,
 };
 
 // Layer color class by type
@@ -52,12 +47,14 @@ export default class StyleControls extends PureComponent {
       visibility: {
         'infoamazonia-6pa1ilyc': false,
         'infoamazonia-5ascfk0h': false,
-        'mineracaobrasil-9cc2wi': false
+        'mineracaobrasil-9cc2wi': false,
+        'ucsbrasil-6b9256': false,
       },
       color: {
         'infoamazonia-6pa1ilyc': '',
         'infoamazonia-5ascfk0h': '',
-        'mineracaobrasil-9cc2wi': ''
+        'mineracaobrasil-9cc2wi': '',
+        'ucsbrasil-6b9256': '',
       }
     };
   }

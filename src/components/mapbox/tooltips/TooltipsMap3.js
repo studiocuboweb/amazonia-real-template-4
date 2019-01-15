@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-export default class TooltipsMap2_3 extends PureComponent {
+export default class TooltipsMap3 extends PureComponent {
 
   render() {
     const {hoveredFeature,x,y} = this.props;

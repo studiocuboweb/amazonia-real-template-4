@@ -41,24 +41,24 @@
             "ios": "4.4.0"
         }
     },
-    "center": [-46.314595304874274, -14.703953685696234],
-    "zoom": 5.722435786771996,
+    "center": [-56.57465173255372, -1.4617954639986408],
+    "zoom": 8.776046570162826,
     "bearing": -0.000039257441017070967,
     "pitch": 2,
     "sources": {
-        "composite": {
-            "url": "mapbox://infoamazonia.52el8pcn,infoamazonia.41qjpyzj,mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2",
-            "type": "vector"
-        },
         "mapbox://infoamazonia.5ascfk0h": {
+            "url": "mapbox://infoamazonia.5ascfk0h",
             "type": "raster",
-            "tiles": ["https://api.mapbox.com/v4/infoamazonia.5ascfk0h/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g"],
             "tileSize": 256
         },
         "mapbox://infoamazonia.6pa1ilyc": {
             "url": "mapbox://infoamazonia.6pa1ilyc",
             "type": "raster",
             "tileSize": 256
+        },
+        "composite": {
+            "url": "mapbox://infoamazonia.52el8pcn,infoamazonia.41qjpyzj,mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2,infoamazonia.8kf4skm9",
+            "type": "vector"
         }
     },
     "sprite": "mapbox://sprites/infoamazonia/cjpqcziyg1rd62rpirmqng84r",
@@ -2636,10 +2636,23 @@
             }
         },
         {
+            "id": "ucsbrasil-6b9256",
+            "type": "fill",
+            "interactive": "true",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "UCsBrasil-6b9256",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(73, 57%, 59%, 0.5)",
+                "fill-outline-color": "#ced25b"
+            }
+        },
+        {
             "id": "quilombolasdesmatamentominera-bl6vgg",
             "type": "fill",
-            "source": "composite",
             "interactive": "true",
+            "source": "composite",
             "source-layer": "QuilombolasDesmatamentoMinera-bl6vgg",
             "layout": {},
             "paint": {
@@ -2650,7 +2663,6 @@
         {
             "id": "infoamazonia-6pa1ilyc",
             "type": "raster",
-            "metadata": {},
             "source": "mapbox://infoamazonia.6pa1ilyc",
             "layout": {},
             "paint": {}
@@ -2658,7 +2670,6 @@
         {
             "id": "infoamazonia-5ascfk0h",
             "type": "raster",
-            "metadata": {},
             "source": "mapbox://infoamazonia.5ascfk0h",
             "layout": {},
             "paint": {}
@@ -2666,7 +2677,6 @@
         {
             "id": "mineracaobrasil-9cc2wi",
             "type": "fill",
-            "metadata": {},
             "source": "composite",
             "source-layer": "MineracaoBrasil-9cc2wi",
             "interactive": "true",
@@ -4044,7 +4054,7 @@
     ],
     "created": "2018-12-16T03:56:50.046Z",
     "id": "cjpqcziyg1rd62rpirmqng84r",
-    "modified": "2019-01-09T13:00:30.453Z",
+    "modified": "2019-01-15T16:45:43.839Z",
     "owner": "infoamazonia",
     "visibility": "private",
     "draft": false

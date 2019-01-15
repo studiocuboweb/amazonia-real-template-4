@@ -22,6 +22,9 @@ export default class TooltipsMap1 extends PureComponent {
               )}
             </p>
           )}
+          {hoveredFeature["properties"].ESFERA && (
+            <p><strong>População: </strong>{hoveredFeature["properties"].NR_FAMILIA} famílias</p>
+          )}  
           <p><strong>Área desmatada: </strong>{hoveredFeature["properties"].N_PORDESQU.toFixed(2).replace(".", ",")}% ({hoveredFeature["properties"].N_PORDESBU.toFixed(2).replace(".", ",")}% do entorno)</p>
           <p><strong>Área de mineração: </strong> {hoveredFeature["properties"].N_PORCINTM.toFixed(2).replace(".", ",")}% ('{hoveredFeature["properties"].N_PMININTB.toFixed(2).replace(".", ",")}% do entorno)</p>
         </div>  

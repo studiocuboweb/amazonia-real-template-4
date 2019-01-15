@@ -55,6 +55,7 @@ class Legend1 extends Component {
         this.state = {
             classActive1: '',
             classActive2: '',
+            classActive3: '',
             arrowClass: 'fa fa-caret-right'
         };
     }
@@ -81,6 +82,9 @@ class Legend1 extends Component {
             if (name == 'mineracaobrasil-9cc2wi') {
                 this.setState({classActive2: 'active'})
             }
+            if (name == 'ucsbrasil-6b9256') {
+                this.setState({classActive3: 'active'})
+            }
         } else {
             checked = false;
             if (name == 'infoamazonia-6pa1ilyc') {
@@ -88,6 +92,9 @@ class Legend1 extends Component {
             }
             if (name == 'mineracaobrasil-9cc2wi') {
                 this.setState({classActive2: ''})
+            }
+            if (name == 'ucsbrasil-6b9256') {
+                this.setState({classActive3: ''})
             }
         }
         this.props._onChangeHandler(name,this.props.parentScope,checked)
@@ -106,6 +113,11 @@ class Legend1 extends Component {
                     </a>
                     <a href="" className={this.state.classActive2} onClick={this._onChangeHandler.bind(this,'mineracaobrasil-9cc2wi')}>
                         <FormattedMessage id="legend1.title2" defaultMessage="Mining">
+                            {(txt) => (txt)}
+                        </FormattedMessage>
+                    </a>
+                    <a href="" className={this.state.classActive3} onClick={this._onChangeHandler.bind(this,'ucsbrasil-6b9256')}>
+                        <FormattedMessage id="legend1.title3" defaultMessage="Conservation units">
                             {(txt) => (txt)}
                         </FormattedMessage>
                     </a>

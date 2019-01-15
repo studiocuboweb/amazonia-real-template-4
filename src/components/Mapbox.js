@@ -8,11 +8,12 @@ import PropTypes from 'prop-types';
 import Dimensions from 'react-dimensions';
 import LegendMap from './mapbox/LegendMap';
 import Fullscreenable from 'react-fullscreenable';
-import TooltipsMap1 from './mapbox/tooltips/TooltipsMap1.js';
-import TooltipsMap1_2 from './mapbox/tooltips/TooltipsMap1_2.js';
-import TooltipsMap2 from './mapbox/tooltips/TooltipsMap2.js';
-import TooltipsMap2_2 from './mapbox/tooltips/TooltipsMap2_2.js';
-import TooltipsMap2_3 from './mapbox/tooltips/TooltipsMap2_3.js';
+import TooltipsMap1 from './mapbox/tooltips/TooltipsMap1';
+import TooltipsMap1_2 from './mapbox/tooltips/TooltipsMap1_2';
+import TooltipsMap1_3 from './mapbox/tooltips/TooltipsMap1_3';
+import TooltipsMap2 from './mapbox/tooltips/TooltipsMap2';
+import TooltipsMap2_2 from './mapbox/tooltips/TooltipsMap2_2';
+import TooltipsMap3 from './mapbox/tooltips/TooltipsMap3';
 import 'mapbox-gl/src/css/mapbox-gl.css'
 
 // import Map1_2 from './mapbox/LegendMap2';
@@ -22,9 +23,10 @@ const MAPBOX_TOKEN = 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiU
 const tooltips = {
   'quilombolasdesmatamentominera-bl6vgg':TooltipsMap1,
   'mineracaobrasil-9cc2wi':TooltipsMap1_2,
+  'ucsbrasil-6b9256':TooltipsMap1_3,
   'mrn-reas-para-minerao-8xm105':TooltipsMap2,
   'comunidadesquilombolasemoriximina':TooltipsMap2_2,
-  'portotrombetas':TooltipsMap2_3
+  'portotrombetas':TooltipsMap3,
 }
 
 class MapBox extends Component {
@@ -45,7 +47,6 @@ class MapBox extends Component {
   }
 
   _onViewportChange = viewport => {
-    console.log(this.props.maxBound);
     if (this.props.maxBounds !== undefined)
       if ( viewport.longitude < this.props.maxBounds.minLongitude ) {
         viewport.longitude = MyOverlay.maxBounds.minLongitude;
