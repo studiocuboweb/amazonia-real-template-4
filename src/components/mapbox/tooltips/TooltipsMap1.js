@@ -13,7 +13,7 @@ export default class TooltipsMap1 extends PureComponent {
           )}
           {hoveredFeature["properties"].ESFERA && (
             <p>
-              <strong>Esfera: </strong>{hoveredFeature["properties"].ESFERA}
+              <strong>Esfera: </strong>{hoveredFeature["properties"].ESFERA}&nbsp;
               {hoveredFeature["properties"].RESPONSAVE && (
                 <span>
                   ({hoveredFeature["properties"].RESPONSAVE})
