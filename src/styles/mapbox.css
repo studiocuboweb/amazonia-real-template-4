@@ -130,6 +130,10 @@
     padding:5px;
   }
 
+  .mapbox_mining_extra_height {
+    height: 221px !important;
+  }
+
   .mapbox_map-overlay {
     position: absolute;
     bottom: 0;

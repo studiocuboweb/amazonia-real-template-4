@@ -5,10 +5,9 @@ export default class TooltipsMap1 extends PureComponent {
   render() {
     const {hoveredFeature,x,y} = this.props;
     return (
-      <div class=".mapboxgl-map mapboxgl-popup mapboxgl-popup-anchor-bottom" style={{"transform": "translate(-50%, -100%) translate("+x+"px,"+y+"px)"}}>
-        <div class="mapboxgl-popup-tip"></div>
-        <div class="mapboxgl-popup-content">
-          <h2>{hoveredFeature["properties"].NM_COMUNID}</h2>
+      <div id="mapbox_mineracao_tooltip">
+        <div className='mapbox_map-overlay mapbox_mining_extra_height' id='mapbox_mining'>
+          <h3>{hoveredFeature["properties"].NM_COMUNID}</h3>
           {hoveredFeature["properties"].FASE && (
             <p><strong>Etapa da titulação: </strong>{hoveredFeature["properties"].FASE}</p>
           )}
