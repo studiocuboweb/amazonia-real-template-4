@@ -7,7 +7,8 @@ export default class TooltipsMap1 extends PureComponent {
     return (
       <div id="mapbox_mineracao_tooltip">
         <div className='mapbox_map-overlay mapbox_mining_extra_height' id='mapbox_mining'>
-          <h3>{hoveredFeature["properties"].NM_COMUNID}</h3>
+          <h3>Terra Quilombola</h3>
+          <p><strong>Nome: </strong>{hoveredFeature["properties"].NM_COMUNID}</p>
           {hoveredFeature["properties"].FASE && (
             <p><strong>Etapa da titulação: </strong>{hoveredFeature["properties"].FASE}</p>
           )}
@@ -21,7 +22,7 @@ export default class TooltipsMap1 extends PureComponent {
               )}
             </p>
           )}
-          {hoveredFeature["properties"].ESFERA && (
+          {hoveredFeature["properties"].NR_FAMILIA > 0 && (
             <p><strong>População: </strong>{hoveredFeature["properties"].NR_FAMILIA} famílias</p>
           )}  
           <p><strong>Área desmatada: </strong>{hoveredFeature["properties"].N_PORDESQU.toFixed(2).replace(".", ",")}% ({hoveredFeature["properties"].N_PORDESBU.toFixed(2).replace(".", ",")}% do entorno)</p>
