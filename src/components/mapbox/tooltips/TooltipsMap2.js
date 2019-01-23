@@ -5,10 +5,10 @@ export default class TooltipsMap2 extends PureComponent {
   render() {
     const {hoveredFeature,x,y} = this.props;
     return (
-      <div class=".mapboxgl-map mapboxgl-popup mapboxgl-popup-anchor-bottom" style={{"transform": "translate(-50%, -100%) translate("+x+"px,"+y+"px)"}}>
-        <div class="mapboxgl-popup-tip"></div>
-        <div class="mapboxgl-popup-content">
-          <h2>{hoveredFeature["properties"].NOME}</h2>
+      <div id="mapbox_mineracao_tooltip">
+        <div className='mapbox_map-overlay mapbox_mining_less_height' id='mapbox_mining'>
+          <h3>Mina</h3>
+          <p><strong>Nome: </strong>{hoveredFeature["properties"].NOME}</p>
           <p><strong>Período de exploração: </strong>{hoveredFeature["properties"].PERIODODEE}</p>
           <p><strong>Área total: </strong>{hoveredFeature["properties"].AREA.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} hectares</p>
           {hoveredFeature["properties"].TONELADAS > 0 && (

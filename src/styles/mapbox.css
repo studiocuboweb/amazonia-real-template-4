@@ -134,6 +134,10 @@
     height: 250px !important;
   }
 
+  .mapbox_mining_less_height {
+    height: 70px !important;
+  }
+
   .mapbox_map-overlay {
     position: absolute;
     bottom: 0;

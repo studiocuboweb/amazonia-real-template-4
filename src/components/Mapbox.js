@@ -13,7 +13,7 @@ import TooltipsMap1_2 from './mapbox/tooltips/TooltipsMap1_2';
 import TooltipsMap1_3 from './mapbox/tooltips/TooltipsMap1_3';
 import TooltipsMap2 from './mapbox/tooltips/TooltipsMap2';
 import TooltipsMap2_2 from './mapbox/tooltips/TooltipsMap2_2';
-import TooltipsMap3 from './mapbox/tooltips/TooltipsMap3';
+import TooltipsMap2_3 from './mapbox/tooltips/TooltipsMap2_3';
 import 'mapbox-gl/src/css/mapbox-gl.css'
 import {AttributionControl} from 'mapbox-gl';
 
@@ -27,7 +27,7 @@ const tooltips = {
   'ucsbrasil-6b9256':TooltipsMap1_3,
   'mrn-reas-para-minerao-8xm105':TooltipsMap2,
   'comunidadesquilombolasemoriximina':TooltipsMap2_2,
-  'portotrombetas':TooltipsMap3,
+  'portotrombetas':TooltipsMap2_3,
 }
 
 class MapBox extends Component {
@@ -187,8 +187,7 @@ class MapBox extends Component {
               <Popup latitude={-1.469} longitude={-56.375} closeButton={true} closeOnClick={false} anchor="bottom">
                 <h2>Porto Trombetas</h2>
               </Popup>
-            )};
-            }
+            )}
           </ReactMapGL>
       }
       </div>
