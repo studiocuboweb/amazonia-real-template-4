@@ -134,6 +134,10 @@
     height: 250px !important;
   }
 
+  .mapbox_mining_extra_height_2 {
+    height: 200px !important;
+  }
+
   .mapbox_mining_less_height {
     height: 70px !important;
   }

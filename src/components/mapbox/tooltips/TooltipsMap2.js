@@ -6,7 +6,7 @@ export default class TooltipsMap2 extends PureComponent {
     const {hoveredFeature,x,y} = this.props;
     return (
       <div id="mapbox_mineracao_tooltip">
-        <div className='mapbox_map-overlay mapbox_mining_extra_height' id='mapbox_mining'>
+        <div className='mapbox_map-overlay mapbox_mining_extra_height_2' id='mapbox_mining'>
           <h3>Mina</h3>
           <p><strong>Nome: </strong>{hoveredFeature["properties"].NOME}</p>
           <p><strong>Período de exploração: </strong>{hoveredFeature["properties"].PERIODODEE}</p>
