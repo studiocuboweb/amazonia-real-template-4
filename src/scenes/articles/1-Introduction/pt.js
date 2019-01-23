@@ -33,19 +33,19 @@ export default () => (
         Um levantamento feito por organizações da Bolívia, Brasil, Colômbia, Equador, Peru e Venezuela confirma a existência de pelo menos <StoryMedia
         icon="map"
         media={{
-        id: "map_01",
+        id: "map_03",
         type: "mapbox",
           data: {
-            map: "map1",
-            legend:"legend1",
-            update: "map1_1",
+            map: "map3",
+            legend:null,
+            update: "map3",
             showExtraLayers: [],
-            coordinates: [-62.798552,-7.736987],
-            zoomNumber: 4,
-            zoomMin: 3,
-            zoomMax: 10
+            coordinates: [-25.687,18.460],
+            zoomNumber: 3.0,
+            zoomMin: 1.0,
+            zoomMax: 4.0,
           }
-        }}> 2312 pontos e 245 áreas de garimpo ou extração de minerais, como ouro, diamantes e coltan. Além disso, foram mapeados 30 rios</StoryMedia>
+        }}>  2312 pontos e 245 áreas de garimpo ou extração de minerais, como ouro, diamantes e coltan. Além disso, foram mapeados 30 rios</StoryMedia>
         afetados pela mineração ou rotas para a entrada de máquinas, insumos e a saída de minerais.
       </Paragraph>
 
@@ -69,17 +69,18 @@ export default () => (
         De todos os pontos mapeados, a maioria está na Venezuela, depois no Brasil, Equador e Peru. Na Colômbia e Bolívia, as unidades de análise foram os rios, razão pela qual não aparecem quantificados como pontos. Entre as 245 áreas de extração, três estão na Bolívia, <StoryMedia
         icon="map"
         media={{
-        id: "map_02a",
+        id: "map_2",
         type: "mapbox",
         data: {
-          map: "map1",
-          legend:"legend1",
-          update:"map1_2",
-          showExtraLayers: ['Para-MASCARA_div-politica-departamental'],
-          coordinates: [-56.604340,-6.120435],
-          zoomNumber: 6.29,
-          zoomMin: 5,
-          zoomMax: 22
+          map: "map2",
+          legend:null,
+          update:"map2",
+          showExtraLayers: [],
+          coordinates: [-56.623,-1.686],
+          maxBounds: {"minLongitude":-59.704,"maxLongitude":-51.677,"minLatitude":-3.040,"maxLatitude":1.773},
+          zoomNumber: 10.0,
+          zoomMin: 7.0,
+          zoomMax: 11.4
         }
         }}>132 no Brasil, principalmente na região do rio Tapajós</StoryMedia>, e 110 no Peru, em Madre de Dios. Este departamento peruano é considerado o setor da Amazônia com a mais pronunciada degradação causada por garimpos de ouro.
       </Paragraph>
@@ -93,17 +94,18 @@ export default () => (
         O vice-diretor da Gaia Amazonas, Camilo Guio, alerta que “essas atividades extrativas ilegais caracterizam-se por sua forma anti-técnica e insustentável. São <StoryMedia
         icon="map"
         media={{
-        id: "map_02b",
+        id: "map_1",
         type: "mapbox",
         data: {
           map: "map1",
-          legend:"legend1",
-          update:"map1_3",
-          showExtraLayers: ['COLOMBIA-MASCARA_div-politica-pais'],
-          coordinates: [-72.254582,0.547990],
-          zoomNumber: 5.50,
-          zoomMin: 3,
-          zoomMax: 22
+          legend:'legend1',
+          update:"map1",
+          showExtraLayers: [],
+          coordinates: [-56.607,-1.279],
+          maxBounds: {"minLongitude":-76.049,"maxLongitude":-33.900,"minLatitude":-35.238,"maxLatitude":8.004},
+          zoomNumber: 7.5,
+          zoomMin: 3.5,
+          zoomMax: 16.0
         }
         }}> feitas principalmente através de balsas e dragas, que não só têm efeitos ambientais no leito do rio</StoryMedia>, mas também o mau uso do mercúrio. Isso está causando danos à saúde das populações locais, especialmente dos povos indígenas".
       </Paragraph>

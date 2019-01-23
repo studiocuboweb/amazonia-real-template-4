@@ -33,17 +33,17 @@ export default () => (
         Un estudio realizado por organizaciones de Bolivia, Brasil, Colombia, Ecuador, Perú y Venezuela confirma la existencia de, al menos, <StoryMedia
         icon="map"
         media={{
-        id: "map_01",
+        id: "map_03",
         type: "mapbox",
           data: {
-            map: "map1",
-            legend:"legend1",
-            update: "map1_1",
+            map: "map3",
+            legend:null,
+            update: "map3",
             showExtraLayers: [],
-            coordinates: [-62.798552,-7.736987],
-            zoomNumber: 4,
-            zoomMin: 3,
-            zoomMax: 10
+            coordinates: [-25.687,18.460],
+            zoomNumber: 3.0,
+            zoomMin: 1.0,
+            zoomMax: 4.0,
           }
         }}> 2312 puntos y 245 áreas de extracción no autorizada de minerales como oro, diamantes y coltán. Además, se identificaron 30 ríos</StoryMedia>
         donde se desarrolla la actividad minera o que sirven como ruta para la entrada de maquinarias e insumos o la salida de los minerales.
@@ -69,17 +69,18 @@ export default () => (
         De todos los puntos mapeados, la mayoría se encuentra en Venezuela, seguido por Brasil, Ecuador y Perú. En Colombia y Bolivia la unidad de análisis correspondió a los ríos, razón por la cual la información no aparece cuantificada como puntos. Entre las 245 áreas de extracción, tres se encuentran en Bolivia, <StoryMedia
         icon="map"
         media={{
-        id: "map_02a",
+        id: "map_2",
         type: "mapbox",
         data: {
-          map: "map1",
-          legend:"legend1",
-          update:"map1_2",
-          showExtraLayers: ['Para-MASCARA_div-politica-departamental'],
-          coordinates: [-56.604340,-6.120435],
-          zoomNumber: 6.29,
-          zoomMin: 5,
-          zoomMax: 22
+          map: "map2",
+          legend:null,
+          update:"map2",
+          showExtraLayers: [],
+          coordinates: [-56.623,-1.686],
+          maxBounds: {"minLongitude":-59.704,"maxLongitude":-51.677,"minLatitude":-3.040,"maxLatitude":1.773},
+          zoomNumber: 10.0,
+          zoomMin: 7.0,
+          zoomMax: 11.4
         }
         }}>132 están en Brasil, principalmente en la región del río Tapajós</StoryMedia>, y 110 en Perú, en Madre de Dios. Este departamento peruano es considerado como el sector de la Amazonia con la mayor degradación causada por  la extracción de oro.
       </Paragraph>
@@ -91,19 +92,20 @@ export default () => (
         El vice-diretor da Gaia Amazonas, Camilo Guio, alerta que "estas actividades extractivas ilegales se caracterizan por su forma antitécnica e insostenible. Se <StoryMedia
         icon="map"
         media={{
-        id: "map_02b",
+        id: "map_1",
         type: "mapbox",
         data: {
           map: "map1",
-          legend:"legend1",
-          update:"map1_3",
-          showExtraLayers: ['COLOMBIA-MASCARA_div-politica-pais'],
-          coordinates: [-72.254582,0.547990],
-          zoomNumber: 5.50,
-          zoomMin: 3,
-          zoomMax: 22
+          legend:'legend1',
+          update:"map1",
+          showExtraLayers: [],
+          coordinates: [-56.607,-1.279],
+          maxBounds: {"minLongitude":-76.049,"maxLongitude":-33.900,"minLatitude":-35.238,"maxLatitude":8.004},
+          zoomNumber: 7.5,
+          zoomMin: 3.5,
+          zoomMax: 16.0
         }
-        }}>realizan principalmente a través de balsas y de dragas, que no sólo tienen efectos ambientales sobre el lecho de los ríos</StoryMedia>, sino también por la mala utilización del mercurio. Esto está generando daños a la salud de las poblaciones locales, especialmente a los pueblos indígenas”
+        }}> realizan principalmente a través de balsas y de dragas, que no sólo tienen efectos ambientales sobre el lecho de los ríos</StoryMedia>, sino también por la mala utilización del mercurio. Esto está generando daños a la salud de las poblaciones locales, especialmente a los pueblos indígenas”
       </Paragraph>
 
       <Paragraph>
