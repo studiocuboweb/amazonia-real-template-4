@@ -153,6 +153,7 @@
     border-radius: 3px;
  }
 
+
  .mapbox_map-overlay h3 {
     font-family: Arial, sans-serif;
     font-size: 0.8em;
@@ -175,4 +176,40 @@
     height: 24px !important;
     box-sizing: border-box !important;
     border-radius: 12px !important;
+}
+
+/* .mapbox_see-more {
+  display:block;
+  float:left;
+  height: 100vh;
+  width: 100vw;
+} */
+
+.mapbox_see-more a {
+    font-size:0.8rem;
+}
+
+.mapbox_see-more .mapbox_see-more-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top:-50px;
+  left:-10px;
+  z-index: 9999999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mapobx_see-more_close-bt {
+  position: absolute;
+  top: 12px;
+  left: 493px;
+  text-align: center;
+  width: 40px;
+  height: 35px;
+  display: block;
+  font-weight: 500;
+  font-family: 'OpenSansSemiboldRegular','Helvetica Neue',Helvetica,Verdana,Arial,sans-serif;
+  font-size: 1.3rem !important;
+  color:#fff;
+  background-color: #000000;
 }

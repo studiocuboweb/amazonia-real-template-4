@@ -5,6 +5,7 @@ import MAP_STYLE2 from './styles/Map2.json';
 import MAP_STYLE3 from './styles/Map3.json';
 import "styles/mapbox.css";
 import Legend1 from './legends/Legend1';
+import { FormattedMessage } from "react-intl";
 
 
 const styles = {
@@ -33,13 +34,16 @@ const colorClass = {
 
 const defaultContainer = ({children}) => <div className="control-panel">{children}</div>;
 
+
 export default class StyleControls extends PureComponent {
 
   constructor(props) {
     super(props);
     this.defaultMapStyle = fromJS(styles[this.props.map]);
     this._defaultLayers = this.defaultMapStyle.get('layers');
-    
+
+    this.setOverlay = true;
+
     this.state = {
       displayLegendBG: {'backgroundColor':'none'}, 
       displayLegend: {'display':'none'},
@@ -55,7 +59,8 @@ export default class StyleControls extends PureComponent {
         'infoamazonia-5ascfk0h': '',
         'mineracaobrasil-9cc2wi': '',
         'ucsbrasil-6b9256': '',
-      }
+      },
+      toggleOverlay: {'display':'none'}
     };
   }
 
@@ -79,6 +84,20 @@ export default class StyleControls extends PureComponent {
     parent_scope.setState({visibility});
     parent_scope._updateMapStyle({...parent_scope.state, visibility});
   }
+
+  _toggleOverlay(ev) {
+    if (!this.setOverlay) {
+      this.setOverlay = true
+      this.setState({toggleOverlay: {'display':'none'}});
+      document.querySelector("div[tabindex='1']").style.pointerEvents = 'all';
+
+    } else { 
+      this.setOverlay = false
+      this.setState({toggleOverlay: {'display':'block'}});
+      document.querySelector("div[tabindex='1']").style.pointerEvents = 'none';
+    }
+    ev.defaultPrevented = true;
+  }
   
   _updateMapStyle({visibility, color}) {
     const layers = this._defaultLayers
@@ -99,16 +118,28 @@ export default class StyleControls extends PureComponent {
   }
 
   _renderLayerControl() {
-      const {visibility} = this.state;
+      const {visibility,toggleOverlay} = this.state;
       const LegendCollapse = Legend1;
       return (
           <div>
-          <LegendCollapse
-            visibility={visibility}
-            onVisibilityChange={this._onVisibilityChange}
-            legend={this.props.legend}
-            parentScope={this}
-          />
+            <LegendCollapse
+              visibility={visibility}
+              onVisibilityChange={this._onVisibilityChange}
+              legend={this.props.legend}
+              parentScope={this}
+            />
+            { this.props.map == 'map1' && (
+              <div className="mapbox_see-more">
+                <a href="#" onClick={this._toggleOverlay.bind(this)}>
+                    <FormattedMessage id="general.seeDetails" defaultMessage="Conservation units">
+                        {(txt) => (txt)}
+                    </FormattedMessage>
+                </a>
+                <div className="mapbox_see-more-overlay" style={toggleOverlay}>
+                    <a href='#' onClick={this._toggleOverlay.bind(this)} className="mapobx_see-more_close-bt" style={{'pointer-events':'all'}}>x</a>
+                </div>
+              </div>
+            )}
           </div>
       );
   }
