@@ -191,18 +191,30 @@
 
 .mapbox_see-more .mapbox_see-more-overlay {
   height: 100vh;
-  width: 100vw;
+  width: 40vw;
   position: absolute;
   top:-50px;
   left:-10px;
+  padding:5px 10px 5px 10px;
   z-index: 9999999;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
+  color:#fff;
+}
+
+
+@media only screen and (max-width: 999px) {
+  .mapbox_see-more .mapbox_see-more-overlay {
+    width: 100vw;
+    height: 387px;
+  }
+  .mapbox_see-more .mapbox_see-more-overflow {
+    max-height: 385px;
+    overflow: auto;
+    pointer-events: auto;
+  }
 }
 
 .mapobx_see-more_close-bt {
-  position: absolute;
-  top: 12px;
-  left: 493px;
   text-align: center;
   width: 40px;
   height: 35px;
@@ -212,4 +224,43 @@
   font-size: 1.3rem !important;
   color:#fff;
   background-color: #000000;
+}
+
+.mapbox_see-more-table-content {
+  width:90%;
+  overflow-y: visible !important;
+}
+
+.mapbox_see-more-table-content h2 {
+ font-size:1.5rem
+}
+
+.mapbox_see-more-table-content h3 {
+  font-size:1.1rem
+ }
+
+.mapbox_see-more-table-content td {
+  vertical-align: top;
+}
+
+.mapbox_see-more-table-content td p {
+  margin: 0px;
+  padding: 0px;
+  font-size:1.1rem;
+}
+
+.mapbox_see-more-table-content .source {
+  margin: 0px;
+  padding: 0px 0px 15px 0;
+  font-size:0.8rem;
+}
+
+.mapbox_see-more-table-content .td-img {
+  padding-right:10px;
+}
+.mapbox_see-more-table-content img {
+  height: 100px;
+  width: 100px !important;
+  max-width: 100px !important;
+  margin: 8px 5px 0 0;
 }

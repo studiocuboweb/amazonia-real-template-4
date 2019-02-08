@@ -85,11 +85,9 @@ class MapBox extends Component {
     console.log(mapboxobj)
     mapboxobj.addControl(new AttributionControl({
       compact: true,
-      customAttribution: ['dasdsadsa','dasdsadsaddsa']
     }))
   }
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps');
     if ((this.props.isFullscreen !== nextProps.isFullscreen)) {
       if (nextProps.isFullscreen ) {
         this.setState(
@@ -164,7 +162,6 @@ class MapBox extends Component {
     const {viewport, mapStyle, updated} = this.state;
     return (
       <div>
-        {console.log(this.props.map)}
         <button style={{position:"absolute", left: 0,cursor: 'pointer',color:'rgb(192, 192, 192)',display: 'block',padding:'0.3rem',border: 0,zIndex:9999,backgroundColor:"#ffffff",margin:'1rem'}} className="fa fa-arrows-alt" onClick={this.props.toggleFullscreen}></button>
       {
         updated &&

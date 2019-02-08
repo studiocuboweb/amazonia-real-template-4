@@ -9,7 +9,7 @@ const Div = styled.div`
         background: #fff;
         z-index: 1;
         border-radius: 3px;
-        width: 120px;
+        width: 135px;
         border: 1px solid rgba(0,0,0,0.4);
         font-family: 'Open Sans', sans-serif;
     }
@@ -23,7 +23,7 @@ const Div = styled.div`
         padding: 10px;
         text-decoration: none;
         border-bottom: 1px solid rgba(0,0,0,0.25);
-        text-align: center;
+        text-align: left;
     }
 
     #menu a:last-child {
@@ -42,6 +42,11 @@ const Div = styled.div`
 
     #menu a.active:hover {
         background: #3074a4;
+    }
+
+    #menu a img {
+        margin: 0 6px 0 0;
+        float:left;
     }
 `;
 
@@ -107,16 +112,19 @@ class Legend1 extends Component {
             <Div>
                 <nav id="menu">
                     <a href="" className={this.state.classActive1} onClick={this._onChangeHandler.bind(this,'infoamazonia-6pa1ilyc')}>
+                        <img src={require('images/legend-icons/icon-1.png')} />
                         <FormattedMessage id="legend1.title1" defaultMessage="Deforestation">
                             {(txt) => (txt)}
                         </FormattedMessage>
                     </a>
                     <a href="" className={this.state.classActive2} onClick={this._onChangeHandler.bind(this,'mineracaobrasil-9cc2wi')}>
+                        <img src={require('images/legend-icons/icon-2.png')} />
                         <FormattedMessage id="legend1.title2" defaultMessage="Mining">
                             {(txt) => (txt)}
                         </FormattedMessage>
                     </a>
-                    <a href="" className={this.state.classActive3} onClick={this._onChangeHandler.bind(this,'ucsbrasil-6b9256')}>
+                    <a href="" className={this.state.classActive3} onClick={this._onChangeHandler.bind(this,'ucsbrasil-6b9256')}>                        
+                        <img src={require('images/legend-icons/icon-3.png')} />
                         <FormattedMessage id="legend1.title3" defaultMessage="Conservation units">
                             {(txt) => (txt)}
                         </FormattedMessage>

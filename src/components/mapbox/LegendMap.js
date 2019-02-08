@@ -131,12 +131,99 @@ export default class StyleControls extends PureComponent {
             { this.props.map == 'map1' && (
               <div className="mapbox_see-more">
                 <a href="#" onClick={this._toggleOverlay.bind(this)}>
-                    <FormattedMessage id="general.seeDetails" defaultMessage="Conservation units">
+                    <FormattedMessage id="general.seeDetails" defaultMessage="See more information">
                         {(txt) => (txt)}
                     </FormattedMessage>
                 </a>
                 <div className="mapbox_see-more-overlay" style={toggleOverlay}>
-                    <a href='#' onClick={this._toggleOverlay.bind(this)} className="mapobx_see-more_close-bt" style={{'pointer-events':'all'}}>x</a>
+                  <div class="mapbox_see-more-overflow">
+                    <table class="mapbox_see-more-table-content">
+                      <tr>
+                        <td colspan="2" align="right"><a href='#' onClick={this._toggleOverlay.bind(this)} className="mapobx_see-more_close-bt" style={{'pointer-events':'all'}}>x</a></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"> 
+                          <h2>
+                            <FormattedMessage id="map1.title" defaultMessage="Title Map 1">
+                              {(txt) => (txt)}
+                            </FormattedMessage>
+                          </h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"> 
+                          <h3>
+                            <FormattedMessage id="legend1.title1" defaultMessage="Deforestation">
+                            {(txt) => (txt)}
+                            </FormattedMessage>
+                          </h3>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="td-img"><img src={require('images/legend-icons/icon-1-large.png')} /></td>
+                        <td>
+                          <p>
+                            <FormattedMessage id="legend1.text1" defaultMessage="Areas of mining concessions in the nine Amazonian countries divided by color according to the stage of granting: light green, areas that already contains mining and mineral research; light blue areas, requested ones; dark blue, areas with exploration potential.">
+                              {(txt) => (txt)}
+                            </FormattedMessage>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" className="source"> 
+                            <FormattedMessage id="legend1.source" defaultMessage="Source">{(txt) => (txt)}</FormattedMessage> : <a href="" target="_blank">RAISG</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"> 
+                          <h3>
+                            <FormattedMessage id="legend1.title2" defaultMessage="Deforestation">
+                            {(txt) => (txt)}
+                            </FormattedMessage>
+                          </h3>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="td-img"><img src={require('images/legend-icons/icon-2-large.png')} /></td>
+                        <td>
+                          <p>
+                            <FormattedMessage id="legend1.text2" defaultMessage="Areas of mining concessions in the nine Amazonian countries divided by color according to the stage of granting: light green, areas that already contains mining and mineral research; light blue areas, requested ones; dark blue, areas with exploration potential.">
+                              {(txt) => (txt)}
+                            </FormattedMessage>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" className="source"> 
+                            <FormattedMessage id="legend1.source" defaultMessage="Source">{(txt) => (txt)}</FormattedMessage> : <a href="" target="_blank">RAISG</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"> 
+                          <h3>
+                            <FormattedMessage id="legend1.title3" defaultMessage="Deforestation">
+                            {(txt) => (txt)}
+                            </FormattedMessage>
+                          </h3>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="td-img"><img src={require('images/legend-icons/icon-3-large.png')} /></td>
+                        <td>
+                          <p>
+                            <FormattedMessage id="legend1.text3" defaultMessage="Areas of mining concessions in the nine Amazonian countries divided by color according to the stage of granting: light green, areas that already contains mining and mineral research; light blue areas, requested ones; dark blue, areas with exploration potential.">
+                              {(txt) => (txt)}
+                            </FormattedMessage>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" className="source"> 
+                            <FormattedMessage id="legend1.source" defaultMessage="Source">{(txt) => (txt)}</FormattedMessage> : <a href="" target="_blank">RAISG</a>
+                        </td>
+                      </tr>
+                    </table> 
+                  </div>
                 </div>
               </div>
             )}
